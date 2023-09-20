@@ -7,9 +7,9 @@ import SignIn from '../pages/Auth/SignIn';
 import SignUp from '../pages/Auth/SignUp';
 // import { ToastContainer } from 'react-toastify';
 
-export const ROOT = '/';
-export const SIGNIN = '/signin';
-export const SIGNUP = '/signup';
+export const ROOT = '';
+export const SIGNIN = 'signin';
+export const SIGNUP = 'signup';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -33,7 +33,6 @@ const Router = () => {
 
   return (
     <>
-      
       <RouterProvider router={router} />
     </>
   );
