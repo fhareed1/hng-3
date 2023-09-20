@@ -7,8 +7,8 @@ import SignIn from '../pages/Auth/SignIn';
 import SignUp from '../pages/Auth/SignUp';
 // import { ToastContainer } from 'react-toastify';
 
-export const ROOT = '';
-export const SIGNIN = 'signin';
+export const ROOT = '/home';
+export const SIGNIN = '/';
 export const SIGNUP = 'signup';
 
 const Router = () => {
