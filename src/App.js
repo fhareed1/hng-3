@@ -4,10 +4,10 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <>
+    <div className='z-50'>
       <ToastContainer />
       <Router />
-    </>
+    </div>
   );
 }
 
