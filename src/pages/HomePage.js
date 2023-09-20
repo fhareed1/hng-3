@@ -11,7 +11,7 @@ import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { SIGNIN } from '../Router/Router';
 
 const HomePage = () => {
-  const [characters, setCharacters] = useState(people);
+  const [users, setUsers] = useState(people);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -43,11 +43,11 @@ const HomePage = () => {
   const handleOnDragEnd = (result) => {
     if (!result.destination) return;
 
-    const items = Array.from(characters);
+    const items = Array.from(users);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
-    setCharacters(items);
+    setUsers(items);
   };
 
   // Function to handle input change and filter characters
@@ -60,7 +60,7 @@ const HomePage = () => {
         characters.name.includes(searchTerm)
     );
 
-    setCharacters(filteredCharacters);
+    setUsers(filteredCharacters);
     setInput(searchTerm);
   };
 
@@ -91,7 +91,7 @@ const HomePage = () => {
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
-                    {characters.map(({ id, name, thumb }, index) => (
+                    {users.map(({ id, name, thumb }, index) => (
                       <Draggable key={id} draggableId={id} index={index}>
                         {(provided) => (
                           <li
