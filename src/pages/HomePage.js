@@ -7,7 +7,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { SIGNIN } from '../Router/Router';
 
 const HomePage = () => {
